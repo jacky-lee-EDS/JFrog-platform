@@ -4,3 +4,9 @@
 ---
 3. 為了測試JAS功能  
 ---
+4. 建置指令
+```
+helm repo add jfrog https://charts.jfrog.io
+helm repo update
+helm upgrade --install jfrog-platform --namespace jfrog-platform --create-namespace jfrog/jfrog-platform -f custom-values.yaml 
+```
