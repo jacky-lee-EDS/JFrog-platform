@@ -22,3 +22,6 @@ helm uninstall jfrog-platform -n jfrog-platform
 watch -n1 "kubectl get all -n jfrog-platform"
 kubectl get pvc -n jfrog-platform -o name | xargs -n 1 kubectl -n jfrog-platform delete 
 ```
+7. 導出設定檔
+```
+helm get values jfrog-platform -n jfrog-platform -o yaml > final-values.yaml
